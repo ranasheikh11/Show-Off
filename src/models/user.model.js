@@ -114,6 +114,14 @@ const userSchema = new mongoose.Schema(
         notificationsEnabled: {
             type: Boolean,
             default: true
+        },
+        isDeactivated: {
+            type: Boolean,
+            default: false
+        },
+        deactivatedAt: {
+            type: Date,
+            default: null
         }
     },
     { timestamps: true }

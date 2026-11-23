@@ -1,19 +1,38 @@
-[2026-10-14T04:42:18.845Z] Server init started. Node Version: v25.9.0
+[2026-11-23T15:44:35.124Z] Server init started. Node Version: v24.14.0
 LOG: Server is running on 0.0.0.0:5000
 LOG: Connected to MongoDB successfully.
-LOG: [RAW HTTP] Method: GET URL: / OriginalURL: /
-LOG: [RAW HTTP] Method: GET URL: /favicon.ico OriginalURL: /favicon.ico
-LOG: [RAW HTTP] Method: POST URL: /api/auth/register OriginalURL: /api/auth/register
-LOG: [RAW HTTP] Method: POST URL: /api/auth/register OriginalURL: /api/auth/register
-LOG: [RAW HTTP] Method: POST URL: /api/auth/register OriginalURL: /api/auth/register
-LOG: [RAW HTTP] Method: POST URL: /api/auth/register OriginalURL: /api/auth/register
-LOG: [RAW HTTP] Method: POST URL: /api/auth/register OriginalURL: /api/auth/register
-LOG: [RAW HTTP] Method: POST URL: /api/auth/register OriginalURL: /api/auth/register
-LOG: [RAW HTTP] Method: POST URL: /api/auth/register OriginalURL: /api/auth/register
+LOG: RECEIVED TOKEN: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNmFiNDkzNTdhYTJhMTJlNzNhNWExOTgzIn0sImlhdCI6MTc5NTQ0MzA0NCwiZXhwIjoxNzk2MDQ3ODQ0fQ.p63Recw6JFfZ1akHiW3fRcTVvfeXihVs9L3zhCCYxKc
+LOG: === TOKEN RECEIVED === Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNmFiNDkzNTdhYTJhMTJlNzNhNWExOTgzIn0sImlhdCI6MTc5NTQ0MzA0NCwiZXhwIjoxNzk2MDQ3ODQ0fQ.p63Recw6JFfZ1akHiW3fRcTVvfeXihVs9L3zhCCYxKc
+LOG: User connected: 6ab49357aa2a12e73a5a1983
+LOG: [RAW HTTP] Method: GET URL: /me OriginalURL: /api/users/me
+LOG: [RAW HTTP] Method: GET URL: /feed?page=1&limit=10&myPosts=false OriginalURL: /api/showoff/feed?page=1&limit=10&myPosts=false
+LOG: [RAW HTTP] Method: GET URL: /?page=1&limit=20 OriginalURL: /api/chats?page=1&limit=20
+LOG: User 6ab49357aa2a12e73a5a1983 joined chat 6ab49931c27db55a297daa21
+LOG: User 6ab49357aa2a12e73a5a1983 joined chat 6acdcdafec5b240f7601128c
+LOG: User 6ab49357aa2a12e73a5a1983 joined chat 6accbfb6a9ff7ad51f7e42a6
+LOG: User 6ab49357aa2a12e73a5a1983 joined chat 6accbde5a9ff7ad51f7e429d
+LOG: User 6ab49357aa2a12e73a5a1983 joined chat 6accbddaa9ff7ad51f7e429a
+LOG: User 6ab49357aa2a12e73a5a1983 joined chat 6accb33af65b4e0659c7e6ab
+LOG: [RAW HTTP] Method: PUT URL: /api/users/fcm-token OriginalURL: /api/users/fcm-token
+ERROR: (node:26208) [MONGOOSE] Warning: mongoose: the `new` option for `findOneAndUpdate()` and `findOneAndReplace()` is deprecated. Use `returnDocument: 'after'` instead.
+(Use `node --trace-warnings ...` to show where the warning was created)
+LOG: [RAW HTTP] Method: GET URL: /feed?page=2&limit=10&myPosts=false OriginalURL: /api/showoff/feed?page=2&limit=10&myPosts=false
+LOG: [RAW HTTP] Method: GET URL: /feed?page=3&limit=10&myPosts=false OriginalURL: /api/showoff/feed?page=3&limit=10&myPosts=false
+LOG: [RAW HTTP] Method: POST URL: /api/users/deactivate OriginalURL: /api/users/deactivate
+LOG: User disconnected: 6ab49357aa2a12e73a5a1983, Reason: client namespace disconnect
 LOG: [RAW HTTP] Method: POST URL: /api/auth/login OriginalURL: /api/auth/login
-LOG: RECEIVED TOKEN: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNmFiNDkyMTJlNjVmYTUxMmI4ZGYyNzc1In0sImlhdCI6MTc5MTk1MzgwNCwiZXhwIjoxNzkyNTU4NjA0fQ.CChWfS3OFsA183Z1Jw2jY5o3BCdTUrJfD6qtZco2X38
-LOG: === TOKEN RECEIVED === Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNmFiNDkyMTJlNjVmYTUxMmI4ZGYyNzc1In0sImlhdCI6MTc5MTk1MzgwNCwiZXhwIjoxNzkyNTU4NjA0fQ.CChWfS3OFsA183Z1Jw2jY5o3BCdTUrJfD6qtZco2X38
-LOG: User connected: 6ab49212e65fa512b8df2775
-LOG: User disconnected: 6ab49212e65fa512b8df2775, Reason: transport close
-LOG: [RAW HTTP] Method: POST URL: /api/auth/login OriginalURL: /api/auth/login
-LOG: [RAW HTTP] Method: POST URL: /api/auth/login OriginalURL: /api/auth/login
+LOG: [RAW HTTP] Method: PUT URL: /api/users/fcm-token OriginalURL: /api/users/fcm-token
+ERROR: (node:26208) [MONGOOSE] Warning: mongoose: the `new` option for `findOneAndUpdate()` and `findOneAndReplace()` is deprecated. Use `returnDocument: 'after'` instead.
+LOG: RECEIVED TOKEN: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNmFiNDkzNTdhYTJhMTJlNzNhNWExOTgzIn0sImlhdCI6MTc5NTQ0MzA0NCwiZXhwIjoxNzk2MDQ3ODQ0fQ.p63Recw6JFfZ1akHiW3fRcTVvfeXihVs9L3zhCCYxKc
+LOG: === TOKEN RECEIVED === Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNmFiNDkzNTdhYTJhMTJlNzNhNWExOTgzIn0sImlhdCI6MTc5NTQ0MzA0NCwiZXhwIjoxNzk2MDQ3ODQ0fQ.p63Recw6JFfZ1akHiW3fRcTVvfeXihVs9L3zhCCYxKc
+LOG: User connected: 6ab49357aa2a12e73a5a1983
+LOG: [RAW HTTP] Method: GET URL: /feed?page=1&limit=10&myPosts=false OriginalURL: /api/showoff/feed?page=1&limit=10&myPosts=false
+LOG: [RAW HTTP] Method: GET URL: /?page=1&limit=20 OriginalURL: /api/chats?page=1&limit=20
+LOG: User 6ab49357aa2a12e73a5a1983 joined chat 6ab49931c27db55a297daa21
+LOG: User 6ab49357aa2a12e73a5a1983 joined chat 6acdcdafec5b240f7601128c
+LOG: User 6ab49357aa2a12e73a5a1983 joined chat 6accbfb6a9ff7ad51f7e42a6
+LOG: User 6ab49357aa2a12e73a5a1983 joined chat 6accbde5a9ff7ad51f7e429d
+LOG: User 6ab49357aa2a12e73a5a1983 joined chat 6accbddaa9ff7ad51f7e429a
+LOG: User 6ab49357aa2a12e73a5a1983 joined chat 6accb33af65b4e0659c7e6ab
+LOG: [RAW HTTP] Method: GET URL: /feed?page=2&limit=10&myPosts=false OriginalURL: /api/showoff/feed?page=2&limit=10&myPosts=false
+LOG: User disconnected: 6ab49357aa2a12e73a5a1983, Reason: transport close

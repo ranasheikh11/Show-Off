@@ -1,9 +1,10 @@
 const User = require('../models/user.model');
 
 const searchUsers = async (query, currentUserId) => {
-    // Search by username or email, excluding the current user
+    // Search by username or email, excluding the current user and deactivated accounts
     const users = await User.find({
         _id: { $ne: currentUserId },
+        isDeactivated: { $ne: true },
         $or: [
             { username: { $regex: query, $options: 'i' } },
             { email: { $regex: query, $options: 'i' } },
@@ -17,7 +18,10 @@ const searchUsers = async (query, currentUserId) => {
 const discoverUsers = async (currentUserId, query) => {
     const { lat, lng, maxDistance = 50, minAge, maxAge, gender, passion } = query;
     
-    let filter = { _id: { $ne: currentUserId } };
+    let filter = {
+        _id: { $ne: currentUserId },
+        isDeactivated: { $ne: true }
+    };
 
     if (lat && lng) {
         filter.location = {
@@ -112,3 +116,16 @@ const deleteAccount = async (userId) => {
 };
 
 module.exports.deleteAccount = deleteAccount;
+
+const deactivateAccount = async (userId) => {
+    const user = await User.findById(userId);
+    if (!user) throw new Error('User not found');
+    user.isDeactivated = true;
+    user.deactivatedAt = new Date();
+    user.isOnline = false;
+    user.fcmToken = null;
+    await user.save();
+    return user;
+};
+
+module.exports.deactivateAccount = deactivateAccount;

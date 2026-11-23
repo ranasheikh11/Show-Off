@@ -1,5 +1,11 @@
 const fs = require('fs');
 const logFile = __dirname + '/debug.log'; // Logging inside the src folder
+const dns = require('dns');
+
+dns.setServers([
+  '8.8.8.8',
+  '8.8.4.4'
+]);
 
 try {
     fs.writeFileSync(logFile, '[' + new Date().toISOString() + '] Server init started. Node Version: ' + process.version + '\n');

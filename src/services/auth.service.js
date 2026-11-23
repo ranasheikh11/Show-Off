@@ -50,6 +50,13 @@ const loginUser = async (email, password) => {
         throw new Error('Invalid email or password.');
     }
 
+    // Auto-reactivate account if it was previously deactivated
+    if (user.isDeactivated) {
+        user.isDeactivated = false;
+        user.deactivatedAt = null;
+        await user.save();
+    }
+
     // Generate Token
     const payload = {
         user: {

@@ -21,6 +21,9 @@ router.put('/accept-privacy-policy', protect, userController.acceptPrivacyPolicy
 // Update FCM Token
 router.put('/fcm-token', protect, userController.updateFcmToken);
 
+// Deactivate user account
+router.post('/deactivate', protect, userController.deactivateAccount);
+
 // Delete user account
 router.delete('/me', protect, userController.deleteAccount);
 

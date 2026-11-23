@@ -99,6 +99,17 @@ const deleteAccount = async (req, res) => {
 
 module.exports.deleteAccount = deleteAccount;
 
+const deactivateAccount = async (req, res) => {
+    try {
+        await userService.deactivateAccount(req.user.id);
+        res.status(200).json({ success: true, message: 'Account deactivated successfully' });
+    } catch (error) {
+        res.status(400).json({ success: false, message: error.message });
+    }
+};
+
+module.exports.deactivateAccount = deactivateAccount;
+
 const testNotification = async (req, res) => {
     try {
         const { fcmToken, title, body } = req.body;
